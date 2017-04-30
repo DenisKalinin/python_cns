@@ -2,7 +2,14 @@
 
 N = int(input())
 
-l1 = [x for x in range(1, N+1)]
-l2 = l1[::-1]
 
-print(l1 + l2)
+l1 = [x for x in range(0, N+1)]
+l1 = l1[0:int(N/2)]
+
+if N%2:
+    l1 += reversed(l1)
+    l1.insert(int(N/2), 1)
+else:
+    l1 += reversed(l1)
+
+print(l1)
